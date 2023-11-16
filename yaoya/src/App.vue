@@ -1,11 +1,20 @@
-<script setup>
-// import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
-  <div class="container bg-warning p-3">
-    <button class="btn btn-primary">123456</button>
-    <button class="btn btn-success">123456</button>
+  <div class="wrap">
+    <HeaderComponent></HeaderComponent>
+    <RouterView />
+    <FooterComponent></FooterComponent>
   </div>
 </template>
-<style lang="scss"></style>
+<script>
+import { RouterView } from 'vue-router'
+import HeaderComponent from './components/base/HeaderComponent.vue'
+import FooterComponent from './components/base/FooterComponent.vue'
+
+export default {
+  components: {
+    RouterView,
+    HeaderComponent,
+    FooterComponent
+  }
+}
+</script>
